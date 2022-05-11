@@ -9,11 +9,23 @@ data1018 = readtable('data/kwiek_1999B.csv');
 % Site 849 (3851m depth)
 data849 = readtable("data/mix_1995.csv");
 
+% Site 1208 (cibs, uvi)
+data_1208_cibs = readtable("data/venti_2012.csv");
+data_1208_uvig = readtable("data/woodard_2016.csv");
+
+% Site 1209 (cibs, uvi)
+data_1209_cibs = readtable("data/ford_1209_cib.csv");
+data_1209_uvig = readtable('data/ford_1209_uvi.csv');
+
 %% Section Two - Preparing Data
 
 data1014_rm = rmmissing(data1014);
 data1018_rm = rmmissing(data1018);
 data849 = rmmissing(data849);
+
+data_1209_uvig = rmmissing(data_1209_uvi);
+data_1209_cibs = rmmissing(data_1209_cibs);
+
 
 
 figure_num = 1;
